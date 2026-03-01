@@ -44,6 +44,8 @@
         </button>
     </div>
 
+    <script src="{{ asset('background-sync.js') }}"></script>
+    <script src="{{ asset('pwa-install.js') }}"></script>
     <script>
         const todoInput = document.getElementById('todo-input');
         const addTodoBtn = document.getElementById('add-todo');
@@ -152,6 +154,8 @@
 
                     await window.queueRequest(fakeRequest);
                     todoInput.value = '';
+                } else {
+                    console.error('Offline queue handler not found!');
                 }
             };
 
@@ -208,8 +212,6 @@
             });
         }
     </script>
-    <script src="{{ asset('background-sync.js') }}"></script>
-    <script src="{{ asset('pwa-install.js') }}"></script>
 </body>
 
 </html>
