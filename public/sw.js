@@ -1,4 +1,4 @@
-const CACHE_NAME = "laravel-pwa-v5";
+const CACHE_NAME = "laravel-pwa-v6";
 const OFFLINE_URL = "/offline";
 
 const FILES_TO_CACHE = [
